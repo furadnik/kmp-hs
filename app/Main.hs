@@ -1,8 +1,8 @@
 module Main where
 
-import qualified Kmp (needleToStates)
+import qualified Kmp
 
 main :: IO ()
 main = do
-  putStrLn "Hello, Haskell!"
-  if length (Kmp.needleToStates "hello") == 5 then putStrLn "Success" else putStrLn "Not."
+  print $ Kmp.needleToStates "a"
+  print $ Kmp.kmpFind "aa" "aaaa"
