@@ -1,7 +1,7 @@
 # kmp-hs
 Implementation of the KMP algorithm in Haskell
 
-## Kmp module
+## Module Usage
 
 The `Kmp` module exports functions for searching in text.
 
@@ -28,3 +28,14 @@ takes states as an argument instead of the needle. Further, the function
 `kmpStep` simulates one step of that automaton.
 
 For further info about the functions, look inside `src/Kmp.hs`.
+
+## CLI usage
+
+The CLI program takes the needle as an argument, and the haystack is read from the standard input.
+The indices are returned, each on its separate line.
+For example:
+```bash
+$ echo "HelloHello" | kmp-hs "Hello"
+0
+5
+```
