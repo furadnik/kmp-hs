@@ -1,8 +1,8 @@
 module Main where
 
-import qualified Kmp (someFunc)
+import qualified Kmp
 
 main :: IO ()
 main = do
-  putStrLn "Hello, Haskell!"
-  Kmp.someFunc
+  print $ Kmp.needleToStates "a"
+  print $ Kmp.kmpFind "aa" "aaaa"
